@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ഭക്തി ദർശൻ പ്ലാനർ - ക്ഷേത്ര തിരക്ക് & നക്ഷത്ര ഗൈഡ്</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            /* വെബ്‌സൈറ്റിന്റെ ബാക്ക്ഗ്രൗണ്ടിൽ നിങ്ങൾ നൽകിയ ക്ഷേത്ര ചിത്രത്തിന്റെ ലിങ്ക് നൽകിയിരിക്കുന്നു */
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 243, 205, 0.9)), 
+                        url('https://images.unsplash.com/photo-1621252179027-94459d278660?q=80&w=1200&auto=format&fit=crop');
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0; 
+            padding: 20px; 
+            color: #2c3e50;
+        }
+        .container { 
+            max-width: 750px; 
+            margin: auto; 
+            background: #ffffff; 
+            padding: 30px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(139, 0, 0, 0.2); 
+            border: 3px solid #d4af37;
+        }
+        h1 { 
+            color: #8b0000; 
+            text-align: center; 
+            font-size: 28px; 
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 15px;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+        /* മുറൽ ആർട്ട് ചിത്രത്തിനായുള്ള ബോക്സ് */
+        .image-gallery {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .temple-img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #d4af37;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .intro-text {
+            background: #fffdf0;
+            padding: 15px;
+            border-left: 5px solid #d4af37;
+            margin-bottom: 25px;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #444;
+            border-radius: 4px;
+        }
+        .section-box {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+        }
+        h3 { color: #b8860b; margin-top: 0; }
+        label { font-weight: bold; color: #555; display: block; margin-top: 10px; }
+        select, input, button { 
+            width: 100%; 
+            padding: 12px; 
+            margin: 8px 0 15px 0; 
+            border: 1px solid #ccc; 
+            border-radius: 6px; 
+            font-size: 15px; 
+            box-sizing: border-box; 
+            background: #fff;
+        }
+        button { 
+            background: linear-gradient(to right, #e67e22, #d35400); 
+            color: white; 
+            border: none; 
+            font-weight: bold; 
+            cursor: pointer; 
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(211, 84, 0, 0.3);
+        }
+        button:hover { background: linear-gradient(to right, #d35400, #e67e22); }
+        #result { 
+            margin-top: 20px; 
+            background: #e8f8f5; 
+            padding: 20px; 
+            border-radius: 8px; 
+            border-left: 5px solid #27ae60; 
+            display: none; 
+        }
+        .slot { padding: 10px; margin: 8px 0; border-radius: 5px; font-weight: 500; }
+        .low { background: #d4efdf; color: #145a32; }
+        .medium { background: #fcf3cf; color: #7d6608; }
+        .high { background: #fadbd8; color: #78281f; }
+        .footer-note { text-align: center; font-size: 12px; color: #777; margin-top: 30px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🛕 ഭക്തി ദർശൻ പ്ലാനർ</h1>
+    <div class="subtitle">ഗുരുവായൂർ, ശബരിമല, തിരുപ്പതി ക്ഷേത്രങ്ങളിലെ തിരക്ക് വിവരങ്ങളും നക്ഷത്ര ഗൈഡും</div>
+
+    <!-- 1. തലവേദന ചിത്രത്തിന് പകരം മനോഹരമായ കേരള മുറൽ ആർട്ട് ചിത്രം -->
+    <div class="image-gallery">
+        <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=800&auto=format&fit=crop" alt="Kerala Mural Art" class="temple-img">
+        <div style="text-align: center; font-size: 13px; margin-top: 8px; color: #8b0000; font-weight: bold;">പരമ്പരാഗത കേരള മുറൽ ആർട്ട് ദൃശ്യം</div>
+    </div>
+
+    <!-- 2. ആമുഖ വിവരങ്ങൾ -->
+    <div class="intro-text">
+        <strong>സ്വാഗതം!</strong> ഈ വെബ്‌സൈറ്റിലൂടെ നിങ്ങൾക്ക് കേരളത്തിലെയും മറ്റ് പ്രധാന ക്ഷേത്രങ്ങളിലെയും വരുന്ന മാസങ്ങളിലെ തിരക്ക് മുൻകൂട്ടി അറിയാൻ സാധിക്കും. ക്യൂവിൽ മണിക്കൂറുകൾ നിൽക്കാതെ, ശാന്തമായി ദർശനം നടത്താൻ ഏറ്റവും അനുയോജ്യമായ സമയവും ദിവസങ്ങളും ഇവിടെ ഞങ്ങൾ കൃത്യമായി വിവരിക്കുന്നു. ഇത് പൂർണ്ണമായും സൗജന്യ സേവനമാണ്.
+    </div>
+
+    <!-- 3. ക്ഷേത്ര തിരക്കും സമയവും പരിശോധിക്കുന്ന സെക്ഷൻ -->
+    <div class="section-box">
+        <h3>ക്ഷേത്രത്തിലെ തിരക്ക് പരിശോധിക്കുക</h3>
+        <label for="templeSelect">ക്ഷേതം തിരഞ്ഞെടുക്കുക:</label>
+        <select id="templeSelect">
+            <option value="guruvayur">ഗുരുവായൂർ ശ്രീകൃഷ്ണ സ്വാമി ക്ഷേത്രം</option>
+            <option value="sabarimala">ശബരിമല ശ്രീ ധർമ്മശാസ്താ ക്ഷേത്രം</option>
+            <option value="tirupati">തിരുപ്പതി തിരുമല വെങ്കടേശ്വര സ്വാമി ക്ഷേത്രം</option>
+        </select>
+
+        <label for="visitDate">ദർശന തീയതി തിരഞ്ഞെടുക്കുക:</label>
+        <input type="date" id="visitDate">
+
+        <button onclick="checkCrowdAndPlan()">തിരക്കും സമയവും പരിശോധിക്കുക</button>
+
+        <div id="result">
+            <h4 id="resTitle" style="color: #16a085; margin-top: 0;"></h4>
+            <div id="slotList"></div>
+        </div>
+    </div>
+
+    <!-- 4. നക്ഷത്രങ്ങളും രാശികളും നോക്കാനുള്ള സെക്ഷൻ -->
+    <div class="section-box">
+        <h3>ജന്മ നക്ഷത്ര ഫലങ്ങളും വിശേഷങ്ങളും</h3>
+        <label for="nakshathram">നിങ്ങളുടെ ജന്മ നക്ഷത്രം തിരഞ്ഞെടുക്കുക:</label>
+        <select id="nakshathram">
+            <option value="ashwathi">അശ്വതി</option>
+            <option value="bharani">ഭരണി</option>
+            <option value="karthika">കാർത്തിക</option>
+            <option value="rohini">രോഹിണി</option>
+            <option value="makayiram">മകയിരം</option>
+            <option value="thiruvonam">തിരുവോണം</option>
+        </select>
+        <button onclick="alert('തിരഞ്ഞെടുത്ത നക്ഷത്രത്തിനുള്ള പ്രത്യേക പൂജാ വിവരങ്ങളും വിശേഷങ്ങളും ഉടൻ ലഭ്യമാകുന്നതാണ്!')" style="background: #27ae60;">നക്ഷത്ര ഫലങ്ങൾ അറിയുക</button>
+    </div>
+
+    <!-- 5. പേരും ജനന തീയതിയും ചോദിക്കുന്ന ഭാഗം ഏറ്റവും അടിയിൽ മാത്രം -->
+    <div class="section-box" style="background: #fdfefe; border: 1px dashed #d4af37;">
+        <h3 style="color: #7f8c8d; font-size: 16px;">വ്യക്തിഗത പ്രൊഫൈൽ (ഐച്ഛികം - താല്പര്യമുള്ളവർ മാത്രം നൽകുക)</h3>
+        <p style="font-size: 13px; color: #666;">നിങ്ങളുടെ പ്രൊഫഷണൽ അപ്ഡേറ്റുകൾക്കായി മാത്രം (നിർബന്ധമില്ല):</p>
+        
+        <label for="userName">പേര്:</label>
+        <input type="text" id="userName" placeholder="നിങ്ങളുടെ പേര് നൽകുക">
+
+        <label for="userDOB">ജനന തീയതി:</label>
+        <input type="date" id="userDOB">
+    </div>
+
+</div>
+
+<div class="footer-note" style="color: #fff; background: rgba(0,0,0,0.6); padding: 10px; border-radius: 5px;">
+    © ഭക്തി ദർശൻ പ്ലാനർ | ഭക്തർക്കായുള്ള സൗജന്യ സേവനം
+</div>
+
+<script>
+    function checkCrowdAndPlan() {
+        const temple = document.getElementById('templeSelect').value;
+        const dateInput = document.getElementById('visitDate').value;
+
+        if (!dateInput) {
+            alert('ദയവായി ഒരു ദർശന തീയതി തിരഞ്ഞെടുക്കുക!');
+            return;
+        }
+
+        const slotList = document.getElementById('slotList');
+        slotList.innerHTML = '';
+
+        let templeName = temple === 'guruvayur' ? 'ഗുരുവായൂർ' : (temple === 'sabarimala' ? 'ശബരിമല' : 'തിരുപ്പതി');
+        document.getElementById('resTitle').innerText = `${templeName} ക്ഷേത്രത്തിലെ തിരക്ക് പ്രെഡിക്ഷൻ:`;
+
+        // മണിക്കൂർ തിരിച്ചുള്ള തിരക്ക് ഷെഡ്യൂൾ ഗ്രാഫ് മാതൃക
+        const schedules = [
+            { time: '04:00 AM - 07:00 AM', status: 'തിരക്ക് വളരെ കുറവാണ് (പെട്ടെന്ന് ദർശനം ലഭിക്കും - ബെസ്റ്റ് ടൈം)', class: 'low' },
+            { time: '09:00 AM - 11:30 AM', status: 'മീഡിയം തിരക്ക് (ഭക്തരുടെ തിരക്ക് കൂടിവരുന്നു)', class: 'medium' },
+            { time: '12:00 PM - 03:30 PM', status: 'ഉച്ചപൂജ / നട അടയ്ക്കുന്ന സമയം (ഒഴിവാക്കുക)', class: 'high' },
+            { time: '04:30 PM - 06:30 PM', status: 'മീഡിയം തിരക്ക്', class: 'medium' },
+            { time: '07:30 PM - 09:30 PM', status: 'സമാധാനമായി ദർശനം നടത്താം (തിരക്ക് കുറവുള്ള സമയം)', class: 'low' }
+        ];
+
+        schedules.forEach(s => {
+            const div = document.createElement('div');
+            div.className = `slot ${s.class}`;
+            div.innerHTML = `<strong>${s.time}</strong>: ${s.status}`;
+            slotList.appendChild(div);
+        });
+
+        document.getElementById('result').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
